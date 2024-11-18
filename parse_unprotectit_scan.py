@@ -48,6 +48,13 @@ def parse_content(raw_text):
     
 
 if __name__ == "__main__":
+    # Parses data from copying in section#content outerText "copy string as JSON Literal"#
+    # Example value:
+    """
+    " Scan Result: 08d95e806e799...Eb3de90eb9268\nSample Information\nFile Hash\t\n\nSample Name\t\n\nFile Size\t232.5 KB\nFirst Seen\t2024-11-18, 3 hours, 14 minutes ago.\nImportant Imports\nGetProcAddress\nMatching Rules\nRule Name\tRule Type\nDetect_Interrupts\tYARA\nYARA_Detect_RDTSC\tYARA\nYARA_Detect_Aspack\tYARA\nYARA_Detect_Asprotect\tYARA\n\nMatching Techniques\nTechnique Name\tTechnique ID's\tSnippet(s)\tRules(s)\tOS\nINT3 Instruction Scanning\tU0105 B0001.025\t\t\t  \nINT 0x2D\tU0129 B0001.006\t\t\t  \nICE 0xF1\tU0130\t\t\t  \nRDTSC\tU0126\t\t\t  \nAsPack\tU1411 F0001.013\t\t\t  \nAsProtect\tU1415\t\t\t  \n\n Scan Another File"
+
+    """
+
     parser = argparse.ArgumentParser(description="Parse a scan result text file.")
     parser.add_argument("input_file", help="Path to the input text file")
 
